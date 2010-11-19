@@ -1,0 +1,239 @@
+/* Display HTML5 elements as block */
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section {
+	display: block;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+/*
+/* Actual styles
+/*/
+
+@font-face {
+  font-family: "Caslon Antique";
+  src: url(CAS_ANTN.TTF) format("truetype");
+}
+
+body {
+	position: relative;
+	font: 100%/1.2 "sorts-mill-goudy-1","sorts-mill-goudy-2", Georgia, serif;
+	margin: 0;
+	padding: 0;
+	background: rgb(246,247,242);
+	color: #334;
+}
+h1, h2 {
+	text-align: center;
+	color: #000;
+}
+a {
+	color: #334;
+}
+a:hover {
+	color: #000;
+}
+.song {
+	font-style: italic;
+}
+
+nav {
+	margin-bottom: 2em;
+	background: rgba(72,34,1,1);
+	-webkit-box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+nav p {
+	width: 640px;
+	margin: 0 auto;
+	padding: 1em;
+	text-align: center;
+	color: rgba(0,0,0,0.8);
+}
+nav a {
+	color: rgba(255,255,255,0.8);
+	text-decoration: none;
+}
+nav a:hover {
+	color: #fff;
+}
+
+article {
+	width: 640px;
+	margin: 0 auto;
+}
+article h1 {
+	font-size: 72px;
+	line-height: 1;
+	text-align: left;
+	text-shadow: rgba(0,0,0,0.3) 1px 2px 12px;
+}
+article h2 {
+	clear: right;
+	font-size: 36px;
+	font-style: italic;
+	padding: 1em 0 0.5em;
+	color: rgba(72,34,1,1);
+	/* background: rgba(189,143,69, 0.2); */
+	text-shadow: rgba(0,0,0,0.3) 1px 2px 12px;
+}
+#intro {
+	position: relative;
+	margin-top: 1em;
+	padding-right: 0px;
+	border-bottom: 1px solid rgba(189,143,69, 0.5);
+}
+#intro img+p {
+	font-size: 112.5%;
+}
+#intro p+p {
+	padding-right: 230px;	
+}
+#intro p+p+p {
+	padding-right: 320px;
+}
+#intro img.pull {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 320px;
+}
+article aside {
+	padding: 1em 0;
+	background: rgba(189,143,69, 0.2);
+}
+article aside h1 {
+	font-size: 2em;
+	font-style: italic;
+	color: rgba(72,34,1,1);
+	text-align: center;
+}
+article aside ul {
+	margin: 1em 0 0;
+	text-align: center;
+}
+article aside a {
+	color: rgba(72,34,1,0.8);
+	text-decoration: none;
+}
+article aside a:hover {
+	color: rgb(72,34,1);
+}
+article footer {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	color: #999;
+	padding-top: 0.5em;
+	border-top: 1px solid #666;
+	text-align: center;
+}
+article footer a {
+	color: #666;
+}
+article footer a:hover {
+	color: #333;
+}
+
+#about {
+	margin-top: 2em;
+	padding-top: 2em;
+	background: rgba(72,34,1,1);
+	border-top: 1px solid #aaa;
+	color: rgba(255,255,255,0.7);
+}
+#about div {
+	position: relative;
+	width: 300px;
+	margin: 0 auto;
+	padding-top: 70px;
+	padding-left: 340px;
+	padding-bottom: 1em;
+	font-size: 14px;
+}
+#about header {
+	position: absolute;
+	width: 300px;
+	left: 0;
+	top: 0;
+	padding-bottom: 237px;
+	background: url(../images/logo.png) left bottom no-repeat;
+}
+#about header h1 {
+	font-size: 48px;
+	line-height: 1;
+	color: #fff;
+	text-shadow: rgba(0,0,0,0.3) 1px 1px 12px;
+}
+#about header h2 {
+	font-size: 18px;
+	font-style: italic;
+	color: rgba(255,255,255,0.8);
+}
+#about header+p {
+	font-size: 15px;
+}
+#about a {
+	color: rgba(255,255,255,0.8);	
+}
+#about a:hover {
+	color: #fff;	
+}
+#about .author {
+	font-size: 18px;
+	font-style: italic;
+	text-align: right;
+}
+header {
+	text-align: center;
+	margin-bottom: 1em;
+}
+p {
+	margin-bottom: 1em;
+}
+object, embed {
+	display: block;
+	background: #000;
+}
