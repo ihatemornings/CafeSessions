@@ -3,6 +3,11 @@ article, aside, dialog, figure, footer, header,
 hgroup, menu, nav, section {
 	display: block;
 }
+
+/*
+/* Reset
+/*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,17 +56,32 @@ blockquote, q {
 }
 
 /*
-/* Actual styles
+/* Fonts
 /*/
 
 @font-face {
-  font-family: "Caslon Antique";
-  src: url(CAS_ANTN.TTF) format("truetype");
+	font-family: 'OFLSortsMillGoudyRegular';
+	src: url('OFLGoudyStM-webfont.eot');
+	src: local('☺'), url('OFLGoudyStM-webfont.woff') format('woff'), url('OFLGoudyStM-webfont.ttf') format('truetype'), url('OFLGoudyStM-webfont.svg#webfontwzHaehaw') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
+
+@font-face {
+	font-family: 'OFLSortsMillGoudyItalic';
+	src: url('OFLGoudyStM-Italic-webfont.eot');
+	src: local('☺'), url('OFLGoudyStM-Italic-webfont.woff') format('woff'), url('OFLGoudyStM-Italic-webfont.ttf') format('truetype'), url('OFLGoudyStM-Italic-webfont.svg#webfontRrg0pQHE') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*
+/* Actual styles
+/*/
 
 body {
 	position: relative;
-	font: 100%/1.2 "sorts-mill-goudy-1","sorts-mill-goudy-2", Georgia, serif;
+	font: 100%/1.2 OFLSortsMillGoudyRegular, Georgia, serif;
 	margin: 0;
 	padding: 0;
 	background: rgb(246,247,242);
@@ -77,13 +97,14 @@ a {
 a:hover {
 	color: #000;
 }
-.song {
+em, .song {
+	font-family: OFLSortsMillGoudyItalic, Georgia, serif;
 	font-style: italic;
 }
 
 nav {
 	margin-bottom: 2em;
-	background: rgba(72,34,1,1);
+	background: #241000;
 	-webkit-box-shadow: 0 2px 12px rgba(0,0,0,0.3);
 }
 nav p {
@@ -91,7 +112,7 @@ nav p {
 	margin: 0 auto;
 	padding: 1em;
 	text-align: center;
-	color: rgba(0,0,0,0.8);
+	color: rgba(255,255,255,0.5);
 }
 nav a {
 	color: rgba(255,255,255,0.8);
@@ -114,7 +135,7 @@ article h1 {
 article h2 {
 	clear: right;
 	font-size: 36px;
-	font-style: italic;
+	font-family: OFLSortsMillGoudyItalic, Georgia, serif;
 	padding: 1em 0 0.5em;
 	color: rgba(72,34,1,1);
 	/* background: rgba(189,143,69, 0.2); */
@@ -147,7 +168,7 @@ article aside {
 }
 article aside h1 {
 	font-size: 2em;
-	font-style: italic;
+	font-family: OFLSortsMillGoudyItalic, Georgia, serif;
 	color: rgba(72,34,1,1);
 	text-align: center;
 }
@@ -180,7 +201,7 @@ article footer a:hover {
 #about {
 	margin-top: 2em;
 	padding-top: 2em;
-	background: rgba(72,34,1,1);
+	background: #241000;
 	border-top: 1px solid #aaa;
 	color: rgba(255,255,255,0.7);
 }
@@ -188,7 +209,7 @@ article footer a:hover {
 	position: relative;
 	width: 300px;
 	margin: 0 auto;
-	padding-top: 70px;
+	padding-top: 80px;
 	padding-left: 340px;
 	padding-bottom: 1em;
 	font-size: 14px;
@@ -209,7 +230,7 @@ article footer a:hover {
 }
 #about header h2 {
 	font-size: 18px;
-	font-style: italic;
+	font-family: OFLSortsMillGoudyItalic, Georgia, serif;
 	color: rgba(255,255,255,0.8);
 }
 #about header+p {
@@ -223,7 +244,7 @@ article footer a:hover {
 }
 #about .author {
 	font-size: 18px;
-	font-style: italic;
+	font-family: OFLSortsMillGoudyItalic, Georgia, serif;
 	text-align: right;
 }
 header {
