@@ -1,0 +1,8 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+# Manually set the index page to the latest session
+RewriteRule ^$ http://cafesessions.com/miriamjones [R,L]
+
+# Short URLs for sessions
+RewriteRule miriamjones 01-miriam-jones.html [NC,L]
