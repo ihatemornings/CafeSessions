@@ -6,3 +6,14 @@ RewriteRule ^$ http://cafesessions.com/miriamjones [R,L]
 
 # Short URLs for sessions
 RewriteRule miriamjones 01-miriam-jones.html [NC,L]
+
+# Make sure video is being served properly
+AddType video/ogg	.ogv
+AddType video/mp4	.mp4,.m4v
+AddType video/webm	.webm
+
+# Font types
+AddType font/x-woff						.woff
+AddType font/ttf						.ttf
+AddType application/vnd.ms-fontobject	.eot
+AddType image/svg+xml					.svg
