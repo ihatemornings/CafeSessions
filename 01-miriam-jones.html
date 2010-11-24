@@ -7,8 +7,29 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link rel="stylesheet" href="css/cafesessions.css" type="text/css" media="screen" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="javascript/jquery.cycle.all.min.js"></script>
+	<script src="javascript/jflickrfeed.js"></script>
+	<script>
+		$(function() {
+			$('#flickr').jflickrfeed({
+				feedapi: 'photoset.gne',
+				limit: 50,
+				qstrings: {
+					set: '72157623303389615',
+					nsid: '13683602@N03'
+				},
+				itemTemplate: '<li><img src="{{image_z}}" alt="" /><div>{{title}}</div></li>'
+			}, function(data) {
+				$('#flickr').cycle({
+					timeout: 5000,
+					height: 434
+				});
+			});
+		});
+	</script>
 	<!-- Google Analytics script -->
-	<script type="text/javascript">
+	<script>
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-511718-11']);
 	  _gaq.push(['_trackPageview']);
@@ -101,12 +122,7 @@
 		
 		<h2>Photos</h2>
 		
-		<object width="640" height="480">
-			<param name="flashvars" value="offsite=true&lang=en-us&page_show_url=%2Fphotos%2Fihatemornings%2Fsets%2F72157623303389615%2Fshow%2F&page_show_back_url=%2Fphotos%2Fihatemornings%2Fsets%2F72157623303389615%2F&set_id=72157623303389615&jump_to=" />
-			<param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=71649" />
-			<param name="allowFullScreen" value="true" />
-			<embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=71649" allowFullScreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2Fihatemornings%2Fsets%2F72157623303389615%2Fshow%2F&page_show_back_url=%2Fphotos%2Fihatemornings%2Fsets%2F72157623303389615%2F&set_id=72157623303389615&jump_to=" width="640" height="480" />
-		</object>
+		<div id="flickr"></div>
 		<p><a href="http://www.flickr.com/photos/ihatemornings/sets/72157623303389615/" title="Café Sessions 01: Miriam Jones by ihatemornings, on Flickr">Café Sessions 01: Miriam Jones by ihatemornings, on Flickr</a></p>
 				
 		<aside>

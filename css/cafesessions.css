@@ -199,6 +199,28 @@ article footer a:hover {
 	color: #333;
 }
 
+#flickr {
+	width: 640px;
+	height: 454px;
+}
+#flickr li {
+	width: 640px;
+	list-style: none;
+}
+#flickr img {
+	display: block;
+	max-height: 434px;
+}
+#flickr div {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 620px;
+	padding: 10px;
+	color: #fff;
+	background: rgba(0,0,0,0.5);
+}
+
 #about {
 	margin-top: 2em;
 	padding-top: 2em;
